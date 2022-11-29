@@ -95,6 +95,6 @@ while not uin in ('w', 'o'):
     uin = input('w/o> ')
 if uin == 'w':
     with open('bot.json', 'w') as f:
-        json.dump(bot_conf, f)
+        json.dump(bot_conf, f, indent = 4)
 else:
     print(json.dumps(bot_conf))

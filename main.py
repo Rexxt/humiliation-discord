@@ -156,6 +156,8 @@ for modfile in os.listdir("commands"):
             py_mod = imp.load_source(mod_name, proper_path)
         elif file_ext.lower() == '.pyc':
             py_mod = imp.load_compiled(mod_name, proper_path)
+        else:
+            continue
 
         if hasattr(py_mod, 'command'):
             commands.append(py_mod.command)

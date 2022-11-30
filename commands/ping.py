@@ -7,6 +7,6 @@ i've been up for {uptime} (<t:{round(bot.start_time)}>)''')
 command = {
     'example': 'ping/how are you doing',
     'help_text': 'shows information about my status',
-    'regex': '(ping|how are you doing)',
+    'regex': '(ping|how +are +you +doing)',
     'function': ping
 }

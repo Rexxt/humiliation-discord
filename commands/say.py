@@ -9,6 +9,6 @@ async def say(commands, bot, conf, message, rm):
 command = {
     'example': 'say <something> [stealthily/anonymously]',
     'help_text': 'repeats what you tell me to',
-    'regex': 'say (.+) (stealthily|anonymously)?',
+    'regex': 'say +(.+)( +stealthily|anonymously)?',
     'function': say
 }

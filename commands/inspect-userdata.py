@@ -27,6 +27,6 @@ async def userdata(commands, bot, conf, message, rm):
 command = {
     'example': 'get <id>\'s (saved/user) data',
     'help_text': '(only for bot owner) will let you inspect the user data i\'ve saved',
-    'regex': r'get +(\w+)\'s +(saved|user) +data',
+    'regex': 'get +(\w+)\'s +(saved|user) +data',
     'function': userdata
 }

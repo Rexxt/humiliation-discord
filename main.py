@@ -76,10 +76,11 @@ async def on_message(message: discord.Message):
 
     test = re.match(r'^' + bot_conf['prefix_regex'] + r' +(.*)?', message.content.lower())
     if test:
-        for command in commands:
+        for command_key in commands:
+            command = commands[command_key]
             if re.match(command['regex'], test.group(bot_conf['command_regex_group_number'])):
                 await command['function'](commands, bot, bot_conf, message, re.match(command['regex'], test.group(bot_conf['command_regex_group_number'])))
-                print(f'{message.author.id} ({message.author.name}#{message.author.discriminator}): triggered command {command["function"].__name__}')
+                print(f'{message.author.id} ({message.author.name}#{message.author.discriminator}): triggered command {command_key}')
                 unknown_command_cooldowns[message.author.id] = {
                     'calls': 0,
                     'last_call_time': time.time()
@@ -142,7 +143,7 @@ async def on_message(message: discord.Message):
                 }
             print(f'{message.author.id} ({message.author.name}#{message.author.discriminator}): empty call')
 
-commands = []
+commands = {}
 
 # import module commands
 for modfile in os.listdir("commands"):
@@ -160,8 +161,8 @@ for modfile in os.listdir("commands"):
             continue
 
         if hasattr(py_mod, 'command'):
-            commands.append(py_mod.command)
-            print('Imported module', mod_name + '.', 'Registered as ' + py_mod.command['function'].__name__ + '.')
+            commands[mod_name] = py_mod.command
+            print('Imported module', mod_name + '.')
         else:
             print('Module', mod_name, 'has no defined command dict.')
 

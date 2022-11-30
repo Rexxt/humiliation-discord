@@ -8,6 +8,6 @@ async def disconnect(commands, bot, conf, message, rm):
 command = {
     'example': 'disconnect/log off/log out',
     'help_text': '(only for bot owner) shuts down the bot',
-    'regex': '(disconnect|log (off|out))',
+    'regex': '(disconnect|log +(off|out))',
     'function': disconnect
 }

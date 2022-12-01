@@ -5,7 +5,7 @@ HUMILIATION (HUman MachIne Language-based InterAcTION) is a Discord bot engine t
 HUMILIATION was created to experiment with human-bot interaction using human language instead of traditional commands, making talking to a bot much more natural.
 
 ## Origins
-A few years ago, [a friend of mine, Oshisaure](https://github.com/Oshisaure), created a bot called `<WEETAD>` (now `<SKWEEK>`), that could respond to diverse commands written in plain English using **Reg**ular **Ex**pressions, all with a comical intent (which, if you know Oshi, is a common occurence). Fast forward to the present day, in 2022: I, Mizu, as the bored nerd I am, decided out of complete boredom but also deep thinking about human-bot interaction to create a general bot engine inspired by `<SKWEEK>`'s functionings, with extreme modularity (in true Mizu fashion). I'll then use this engine to develop my bot, [Hachi](https://github.com/Rexxt/hachi-bot), a generalist/Splatoon bot with a developed original character.
+A few years ago, [a friend of mine, Oshisaure](https://github.com/Oshisaure), created a bot called `<WEETAD>` (now `<SKWEEK>`), that could respond to diverse commands written in plain English using **Reg**ular **Ex**pressions, all with a comical intent (which, if you know Oshi, is a common occurence). Fast forward to the present day, in 2022: I, Mizu, as the bored nerd I am, decided out of complete boredom but also deep thinking about human-bot interaction to create a general bot engine inspired by `<SKWEEK>`'s functionings, with extreme modularity (in true Mizu fashion). I'll then use this engine to develop my bot, [Hachi](https://github.com/Rexxt/hachi-discord), a generalist/Splatoon bot with a developed original character.
 
 ## How to use
 ### Prerequisites
